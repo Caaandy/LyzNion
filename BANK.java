@@ -18,7 +18,7 @@ public class BANK {
             while (rs.next())
             {
                 String t = rs.getString("name");
-                if (rs.equals(na)) 
+                if (t.equals(na)) 
                 {
                     i = true;
                 }
