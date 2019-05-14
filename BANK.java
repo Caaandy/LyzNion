@@ -4,15 +4,33 @@ public class BANK {
     Connection con;
     Statement stmt;
     ResultSet rs;
-    
+
     public BANK(){
         connectDB("db4free.net", "dbname", "username", "password");
     }
-    
-    public void userSuchen() {
-        
+
+    public boolean userSuchen(String na) {
+        boolean i = false;
+        try
+        {
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("SELECT name FROM members");
+            while (rs.next())
+            {
+                String t = rs.getString("name");
+                if (rs.equals(na)) 
+                {
+                    i = true;
+                }
+            }
+        }
+        catch (Exception e) 
+        {
+            System.out.println("Verbindung fehlgeschlagen."); 
+        }
+        return i;
     }
-    
+
     /**
      * Methode connectDB
      * Verbindet mit der Datenbank und ggf. eine Fehlermeldung aus.
@@ -57,7 +75,7 @@ public class BANK {
             System.out.println("Trennen fehlgeschlagen.");
         }
     }
-    
+
     /**
      * Methode BeispielErzeugen
      * Erzeugt eine Tabelle in der Datenbank und füllt sie mit Beispieldaten
@@ -78,7 +96,7 @@ public class BANK {
             System.out.println("Erzeugen fehlgeschlagen.");
         }
     }
-    
+
     /**
      * Methode BeispielAbfrage
      * Macht eine Datenbankabfrage und gibt das Ergebnis aus
@@ -102,7 +120,7 @@ public class BANK {
             System.out.println("Abfrage fehlgeschlagen.");
         }
     }
-    
+
     /**
      * Methode BeispielAendern
      * Führt eine Änderung in der Datenbank aus
@@ -121,7 +139,7 @@ public class BANK {
             System.out.println("Ändern fehlgeschlagen.");
         }
     }
-    
+
     /**
      * Methode BeispielLoeschen
      * Löscht die Tabelle, die mit der Methode BeispielErzeugen angelegt wurde
