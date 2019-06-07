@@ -43,7 +43,7 @@ public class MAIN implements ActionListener {
        fenster.setLocation(500,500);
        fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        fenster.add(panel);
-       fenster.setVisible(false);
+       fenster.setVisible(true);
        
        b1 = new JButton("LYZ");
        b1.addActionListener(this);
@@ -63,14 +63,14 @@ public class MAIN implements ActionListener {
        fenster2.setLocation(500,500);
        fenster2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        fenster2.add(panel2);
-       fenster2.setVisible(true);
+       fenster2.setVisible(false);
     }
     
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == button1)
         {
             try {
-                if(bank.userSuchen(name1.getText())== false) {
+                if(bank.userSuchen(name1.getText())) {
                     System.out.println("yay");
                     charakterWahl();
                 }
