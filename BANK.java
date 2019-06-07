@@ -6,7 +6,7 @@ public class BANK {
     ResultSet rs;
 
     public BANK(){
-        connectDB("db4free.net", "dbname", "username", "password");
+        connectDB("db4free.net", "lyznion", "candyli", "ZebraMatschgrün");
     }
 
     public boolean userSuchen(String na) {
