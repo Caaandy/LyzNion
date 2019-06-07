@@ -6,7 +6,7 @@ public class BANK {
     ResultSet rs;
 
     public BANK(){
-        connectDB("db4free.net", "member", "candyli", "ZebraMatschgrün");
+        connectDB("db4free.net", "lyznion", "candyli", "ZebraMatschgrün");
     }
 
     public boolean userSuchen(String na) {
@@ -14,7 +14,7 @@ public class BANK {
         try
         {
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT name FROM member");
+            rs = stmt.executeQuery("SELECT name FROM Member");
             while (rs.next())
             {
                 String t = rs.getString("name");
