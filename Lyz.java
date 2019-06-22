@@ -3,17 +3,25 @@ public class Lyz extends STORY {
     public Lyz(){
     }
     
-    public void einleitung() {
+    public String einleitung() {
+        String l = "beginn der geschichte";
+        return l;
     }
     
-    public void chapter1(){
+    public String chapter1(){
+        String l = "beginn der geschichte";
+        return l;
     }
     
-    public void chapter2(){
+    public String chapter2(){
+        String l = "beginn der geschichte";
+        return l;
     }
     
     //...
     
-    public void schluss(){
+    public String schluss(){
+        String l = "beginn der geschichte";
+        return l;
     }
 }

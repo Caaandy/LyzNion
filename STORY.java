@@ -1,7 +1,7 @@
 abstract class STORY {
-    abstract void einleitung(); 
-    abstract void chapter1();
-    abstract void chapter2();
+    abstract String einleitung(); 
+    abstract String chapter1();
+    abstract String chapter2();
     //...
-    abstract void schluss();
+    abstract String schluss();
 }
