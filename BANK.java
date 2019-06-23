@@ -70,7 +70,7 @@ public class BANK {
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection( "jdbc:mysql://"+ip+":3306/"+db, user, pw);
-            System.out.println("Verbindung hergestellt.");
+            //System.out.println("Verbindung hergestellt.");
 
         }
         catch (Exception e) 

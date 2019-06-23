@@ -24,7 +24,7 @@ public class MAIN implements ActionListener {
     public MAIN(){
         blubb = l;
         bank = new BANK();
-        
+
         //elemente + buttonsListener
         button1 = new JButton("Anmelden");
         button1.addActionListener(this);
@@ -90,7 +90,15 @@ public class MAIN implements ActionListener {
             try {
                 String m = name1.getText();
                 if(bank.userSuchen(m)) {
-                    charakterWahl();
+                    if(bank.chapterAbfrage(m) == 0) {
+                        charakterWahl();
+                    }
+                    else if(bank.chapterAbfrage(m) == -2){
+                        System.out.println("Etwas ist fehlgeschlagen! D:");
+                    }
+                    else{
+                        System.out.println("moin moin hat funktioniert :D");
+                    }
                 }
                 else {
                     name1.setText("User nicht vorhanden!");
@@ -98,7 +106,7 @@ public class MAIN implements ActionListener {
             }
             catch(Exception ex)
             {
-                    System.out.println("nope");
+                System.out.println("nope");
             }
         }
         if(e.getSource() == button2)
@@ -128,7 +136,7 @@ public class MAIN implements ActionListener {
             einleitung();
         }
     }
-    
+
     public void einleitung(){
         LY.setText("<html>" + blubb.einleitung() + ""
             +"</html>");
