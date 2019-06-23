@@ -4,7 +4,6 @@ public class BANK {
     Connection con;
     Statement stmt;
     ResultSet rs;
-    ResultSet sr;
 
     public BANK(){
         connectDB("db4free.net", "lyznion", "candyli", "ZebraMatschgrün");
@@ -36,14 +35,13 @@ public class BANK {
         int cha = 0;
         try{
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT name FROM Member");
-            sr = stmt.executeQuery("SELECT chapter FROM Member");
+            rs = stmt.executeQuery("SELECT * FROM Member");
             while (rs.next())
             {
                 String t = rs.getString("name");
                 if (t.equals(na)) 
                 {
-                    cha = sr.getInt("chapter");
+                    cha = rs.getInt("chapter");
                 }
             }
         }
