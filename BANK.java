@@ -4,6 +4,7 @@ public class BANK {
     Connection con;
     Statement stmt;
     ResultSet rs;
+    ResultSet sr;
 
     public BANK(){
         connectDB("db4free.net", "lyznion", "candyli", "ZebraMatschgrün");
@@ -26,9 +27,31 @@ public class BANK {
         }
         catch (Exception e) 
         {
-            System.out.println("Verbindung fehlgeschlagen."); 
+            System.out.println("Userabfrage fehlgeschlagen."); 
         }
         return i;
+    }
+    
+    public int chapterAbfrage(String na){
+        int cha = 0;
+        try{
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("SELECT name FROM Member");
+            sr = stmt.executeQuery("SELECT chapter FROM Member");
+            while (rs.next())
+            {
+                String t = rs.getString("name");
+                if (t.equals(na)) 
+                {
+                    cha = sr.getInt("chapter");
+                }
+            }
+        }
+        catch (Exception e){
+            cha = -2;
+            System.out.println("Chapterabfrage fehlgeschlagen."); 
+        }
+        return cha;
     }
 
     /**
@@ -73,27 +96,6 @@ public class BANK {
         catch (Exception e)
         {
             System.out.println("Trennen fehlgeschlagen.");
-        }
-    }
-
-    /**
-     * Methode BeispielErzeugen
-     * Erzeugt eine Tabelle in der Datenbank und füllt sie mit Beispieldaten
-     * 
-     */
-    public void BeispielErzeugen()
-    {
-        try
-        {
-            stmt = con.createStatement();
-            stmt.execute("CREATE TABLE test ( zahl INT, text VARCHAR(20))");
-            stmt.execute("ALTER TABLE test ADD PRIMARY KEY(zahl)");
-            stmt.execute("INSERT INTO test (zahl, text) VALUES (1, 'adam'), (2, 'berta')");
-            System.out.println("Tabelle erzeugt.");
-        }
-        catch (Exception e)
-        {
-            System.out.println("Erzeugen fehlgeschlagen.");
         }
     }
 

@@ -90,7 +90,6 @@ public class MAIN implements ActionListener {
             try {
                 String m = name1.getText();
                 if(bank.userSuchen(m)) {
-                    System.out.println("yay");
                     charakterWahl();
                 }
                 else {
