@@ -126,17 +126,14 @@ public class MAIN implements ActionListener {
         if(e.getSource() == button1)
         {
             try {
-                String m = name1.getText();
-                if(bank.userSuchen(m)) {
-                    int chapt = bank.chapterAbfrage(m);
+                na = name1.getText();
+                if(bank.userSuchen(na)) {
+                    int chapt = bank.chapterAbfrage(na);
                     if(chapt == 0) {
                         charakterWahl();
                     }
-                    else if(chapt == -2){
-                        System.out.println("Etwas ist fehlgeschlagen! D:");
-                    }
                     else {
-                        charakter(m);
+                        charakter(na);
                         switch (chapt){
                             //"Checkpoints"
                             case 1:
@@ -163,7 +160,8 @@ public class MAIN implements ActionListener {
         if(e.getSource() == button2)
         {
             try {
-                if(bank.userSuchen(name2.getText()) == false) {
+                na = name2.getText();
+                if(bank.userSuchen(na) == false) {
                     charakterWahl();
                 }
                 else
@@ -179,11 +177,13 @@ public class MAIN implements ActionListener {
         if(e.getSource() == b1)
         { 
             blubb = l;
+            bank.charakterNeu("Lyz", na);
             einleitung();
         }
         if(e.getSource() == b2)
         { 
             blubb = n;
+            bank.charakterNeu("Nion", na);
             einleitung();
         }
         if(e.getSource() == auswahl1)
@@ -232,11 +232,11 @@ public class MAIN implements ActionListener {
         }
     }
     
-    public void charakter(String na) {
-        if (bank.charakterAbfrage(na) == "Lyz") {
+    public void charakter(String name) {
+        if (bank.charakterAbfrage(name) == "Lyz") {
             blubb = l;
         }
-        else if(bank.charakterAbfrage(na) == "Nion") {
+        else if(bank.charakterAbfrage(name) == "Nion") {
             blubb = n;
         }
         else {
@@ -259,15 +259,13 @@ public class MAIN implements ActionListener {
         labelgesch.setText("<html>" + blubb.einleitung(1) + ""
             +"</html>");
             auswahl1.setText("umblättern");
-        /*auswahl1.setText("Kaffee");
-        auswahl2.setText("Tee");
-        auswahl3.setText("Pandaanhänger");*/
     }
 
     public void chapter1() {
         auswahl1.setText("eins");
         auswahl2.setText("EINS");
         labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
+        bank.chapterNeu(1, na);
     }
     
     public void chapter2(int j) {
@@ -280,6 +278,7 @@ public class MAIN implements ActionListener {
         auswahl1.setText("drei");
         auswahl2.setText("DREI");
         labelgesch.setText("<html>" + blubb.chapter3() + "</html>");
+        bank.chapterNeu(3, na);
     }
     
     public void chapter4(int j) {
@@ -292,6 +291,7 @@ public class MAIN implements ActionListener {
         auswahl1.setText("fünf");
         auswahl2.setText("FÜNF");
         labelgesch.setText("<html>" + blubb.chapter5() + "</html>");
+        bank.chapterNeu(5, na);
     }
     
     public void chapter6(int j) {
@@ -316,5 +316,6 @@ public class MAIN implements ActionListener {
         auswahl1.setText("");
         auswahl2.setText("");
         labelgesch.setText("<html>" + blubb.schluss() + "</html>");
+        bank.chapterNeu(0, na);
     }
 }

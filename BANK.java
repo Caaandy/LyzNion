@@ -46,7 +46,6 @@ public class BANK {
             }
         }
         catch (Exception e){
-            cha = -2;
             System.out.println("Chapterabfrage fehlgeschlagen."); 
         }
         return cha;
@@ -70,6 +69,30 @@ public class BANK {
             System.out.println("Chapterabfrage fehlgeschlagen."); 
         }
         return chara;
+    }
+    
+    public void chapterNeu(int o, String na) {
+        try
+        {
+            stmt = con.createStatement();
+            stmt.executeUpdate("UPDATE Member SET chapter = o WHERE name = 'na' ");
+        }
+        catch (Exception e)
+        {
+            System.out.println("Chapter Ändern fehlgeschlagen.");
+        }
+    }
+    
+    public void charakterNeu(String chara, String na) {
+        try
+        {
+            stmt = con.createStatement();
+            stmt.executeUpdate("UPDATE Member SET story = chara WHERE name = 'na' ");
+        }
+        catch (Exception e)
+        {
+            System.out.println("Charakter Ändern fehlgeschlagen.");
+        }
     }
 
     /**
@@ -118,6 +141,7 @@ public class BANK {
     }
 
     /**
+     * 
      * Methode BeispielAbfrage
      * Macht eine Datenbankabfrage und gibt das Ergebnis aus
      * 
