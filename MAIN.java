@@ -15,6 +15,14 @@ public class MAIN implements ActionListener {
     private JButton button2;
     private JFrame fenster2;
     private JPanel panel2;
+    private JFrame fenster3;
+    private JLabel labelgesch;
+    private JFrame fenster4;
+    private JPanel panel4;
+    private JButton bmenu;
+    private JButton auswahl1;
+    private JButton auswahl2;
+    private JButton auswahl3;
     private JLabel LY;
     private JLabel NI;
     private JButton b1;
@@ -51,7 +59,7 @@ public class MAIN implements ActionListener {
         b1.addActionListener(this);
         b2 = new JButton("NION");
         b2.addActionListener(this);
-        //LY = new JTextField("Lyz ist eine Kämpferin, sieht auf den ersten Blick kalt aus, ist aber eine sehr offene und schnell aufbrausende Person. Sie ist sehr vorlaut und lässt keine Gelegenheit aus, zu kämpfen. Sie hat die Fähigkeit, Blitze zu kontrollieren. Außerdem liebt sie Süßigkeiten, die sie heimlich in ihren Taschen versteckt.");
+        
         LY = new JLabel();
         LY.setText("<html>"
             +"<p>Lyz ist eine Kämpferin, sieht auf den ersten Blick kalt aus, "
@@ -68,7 +76,6 @@ public class MAIN implements ActionListener {
             +"einem Plan. Außerdem verleit ihm die Pigmentstörung Vitiligo "
             +"ein besonderes Aussehen. Er liebt es, sarkastisch zu sein.</p>"
             +"</html>");
-        //NI = new JTextField("Nions einzige Verteidigung ist sein Dolch, da er durch seine überdurchschnittliche Intelligenz keine weiteren Waffen benötigt. Er handelt nicht vorschnell, sondern überlegt und immer nach einem Plan. Außerdem verleit ihm die Pigmentstörung Vitiligo ein besonderes Aussehen. Er liebt es, sarkastisch zu sein.");
 
         panel2 = new JPanel(new GridLayout(2,2));
         panel2.add(LY);
@@ -82,6 +89,41 @@ public class MAIN implements ActionListener {
         fenster2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fenster2.add(panel2);
         fenster2.setVisible(false);
+        
+        //fenster 3 + 4
+        auswahl1 = new JButton("Kaffee");
+        auswahl1.addActionListener(this);
+        auswahl2 = new JButton("Tee");
+        auswahl2.addActionListener(this);
+        auswahl3 = new JButton("Pandaanhänger");
+        auswahl3.addActionListener(this);
+        bmenu = new JButton("zurück zum Menu");
+        bmenu.addActionListener(this);
+        labelgesch = new JLabel();
+        labelgesch.setText("<html>"
+            +"<p>what"
+            +"ever</p>"
+            +"</html>");
+
+        fenster3 = new JFrame("Fenster");
+        fenster3.setSize(800,600);
+        fenster3.setLocation(100,200);
+        fenster3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fenster3.add(labelgesch);
+        fenster3.setVisible(false);
+
+        panel4 = new JPanel(new GridLayout(4,1));
+        panel4.add(auswahl1);
+        panel4.add(auswahl2);
+        panel4.add(auswahl3);
+        panel4.add(bmenu);
+
+        fenster4 = new JFrame("Fenster");
+        fenster4.setSize(500,450);
+        fenster4.setLocation(1000,300);
+        fenster4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fenster4.add(panel4);
+        fenster4.setVisible(false);
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -95,9 +137,6 @@ public class MAIN implements ActionListener {
                     }
                     else if(bank.chapterAbfrage(m) == -2){
                         System.out.println("Etwas ist fehlgeschlagen! D:");
-                    }
-                    else{
-                        System.out.println("moin moin hat funktioniert :D");
                     }
                 }
                 else {
@@ -135,15 +174,51 @@ public class MAIN implements ActionListener {
             blubb = n;
             einleitung();
         }
-    }
-
-    public void einleitung(){
-        LY.setText("<html>" + blubb.einleitung() + ""
-            +"</html>");
+        if(e.getSource() == auswahl1)
+        {
+            switch (auswahl1.getText())
+            {
+                case "Kaffee":
+                    chapter1();
+                    break;
+                    //Spielerei
+                case "NEU":
+                    einleitung();
+                    break;
+            } 
+        }
+        if(e.getSource() == bmenu)
+        {
+            fenster2.setVisible(false);
+            fenster.setVisible(true);
+            fenster3.setVisible(false);
+            fenster4.setVisible(false);
+        }
     }
 
     public void charakterWahl() {
         fenster.setVisible(false);
         fenster2.setVisible(true);
+        fenster3.setVisible(false);
+        fenster4.setVisible(false);
+    }
+    
+    public void einleitung(){
+        fenster.setVisible(false);
+        fenster2.setVisible(false);
+        fenster3.setVisible(true);
+        fenster4.setVisible(true);
+        labelgesch.setText("<html>" + blubb.einleitung() + ""
+            +"</html>");
+        auswahl1.setText("Kaffee");
+        auswahl2.setText("Tee");
+        auswahl3.setText("Pandaanhänger");
+    }
+
+    public void chapter1() {
+        auswahl1.setText("NEU");
+        auswahl2.setText("neu");
+        auswahl3.setText("nEu");
+        labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
     }
 }
