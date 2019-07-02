@@ -51,6 +51,26 @@ public class BANK {
         }
         return cha;
     }
+    
+    public String charakterAbfrage(String na) {
+        String chara = null;
+        try{
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM Member");
+            while (rs.next())
+            {
+                String t = rs.getString("name");
+                if (t.equals(na)) 
+                {
+                    chara = rs.getString("story");
+                }
+            }
+        }
+        catch (Exception e){
+            System.out.println("Chapterabfrage fehlgeschlagen."); 
+        }
+        return chara;
+    }
 
     /**
      * Methode connectDB

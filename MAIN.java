@@ -136,6 +136,7 @@ public class MAIN implements ActionListener {
                         System.out.println("Etwas ist fehlgeschlagen! D:");
                     }
                     else {
+                        charakter(m);
                         switch (chapt){
                             //"Checkpoints"
                             case 1:
@@ -228,6 +229,18 @@ public class MAIN implements ActionListener {
             fenster.setVisible(true);
             fenster3.setVisible(false);
             fenster4.setVisible(false);
+        }
+    }
+    
+    public void charakter(String na) {
+        if (bank.charakterAbfrage(na) == "Lyz") {
+            blubb = l;
+        }
+        else if(bank.charakterAbfrage(na) == "Nion") {
+            blubb = n;
+        }
+        else {
+            System.out.println("Charakterabfrage fehlgeschlagen!");
         }
     }
 
