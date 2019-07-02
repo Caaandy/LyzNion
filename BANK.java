@@ -72,13 +72,10 @@ public class BANK {
     }
     
     public void chapterNeu(int o, String na) {
-        int chapt = o;
-        String nam = na;
         try
         {
             stmt = con.createStatement();
-            //stmt.executeUpdate("UPDATE Member SET chapter = o WHERE name = na ");
-            stmt.executeUpdate("UPDATE `Member` SET `chapter` = chapt WHERE `Member`.`name`=nam ");
+            stmt.executeUpdate("UPDATE `Member` SET `chapter` = "+o+" WHERE `Member`.`name`= "+na+";");
         }
         catch (Exception e)
         {
@@ -87,13 +84,10 @@ public class BANK {
     }
     
     public void charakterNeu(String chara, String na) {
-        String nam = na;
-        String character = chara;
         try
         {
             stmt = con.createStatement();
-            //stmt.executeUpdate("UPDATE Member SET story = chara WHERE name = na ");
-            stmt.executeUpdate("UPDATE `Member` SET `story` = character WHERE `Member`.`name` = nam");
+            stmt.executeUpdate("UPDATE `Member` SET `story` = " +chara+ " WHERE `Member`.`name` = "+na+";");
         }
         catch (Exception e)
         {
@@ -105,8 +99,7 @@ public class BANK {
         try
         {
             stmt = con.createStatement();
-            //stmt.execute("INSERT INTO Member (story, name, chapter) VALUES ('Lyz', n, 0)");
-            stmt.execute("INSERT INTO `Member` (`story`, `name`, `chapter`) VALUES ('Lyz', 'n', '0')");
+            stmt.execute("INSERT INTO `Member` (`story`, `name`, `chapter`) VALUES ('Lyz', "+n+", '0');");
         }
         catch (Exception e)
         {

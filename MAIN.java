@@ -133,6 +133,10 @@ public class MAIN implements ActionListener {
                         charakterWahl();
                     }
                     else {
+                        fenster.setVisible(false);
+                        fenster2.setVisible(false);
+                        fenster3.setVisible(true);
+                        fenster4.setVisible(true);
                         charakter(na);
                         switch (chapt){
                             //"Checkpoints"
