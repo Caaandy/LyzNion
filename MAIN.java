@@ -26,8 +26,8 @@ public class MAIN implements ActionListener {
     private JLabel NI;
     private JButton b1;
     private JButton b2;
-    private String na;
-
+    private String na; 
+    
     public MAIN(){
         blubb = l;
         bank = new BANK();
@@ -162,6 +162,7 @@ public class MAIN implements ActionListener {
             try {
                 na = name2.getText();
                 if(bank.userSuchen(na) == false) {
+                    bank.neuerUser(na);
                     charakterWahl();
                 }
                 else
@@ -233,13 +234,15 @@ public class MAIN implements ActionListener {
     }
     
     public void charakter(String name) {
-        if (bank.charakterAbfrage(name) == "Lyz") {
+        String chara = bank.charakterAbfrage(name);
+        if (chara.equals("Lyz")) {
             blubb = l;
         }
-        else if(bank.charakterAbfrage(name) == "Nion") {
+        else if(chara.equals("Nion")) {
             blubb = n;
         }
         else {
+            System.out.println(chara);
             System.out.println("Charakterabfrage fehlgeschlagen!");
         }
     }
@@ -258,14 +261,15 @@ public class MAIN implements ActionListener {
         fenster4.setVisible(true);
         labelgesch.setText("<html>" + blubb.einleitung(1) + ""
             +"</html>");
-            auswahl1.setText("umblättern");
+        auswahl1.setText("umblättern");
+        auswahl2.setText("");
     }
 
     public void chapter1() {
+        bank.chapterNeu(1, na);
         auswahl1.setText("eins");
         auswahl2.setText("EINS");
         labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
-        bank.chapterNeu(1, na);
     }
     
     public void chapter2(int j) {
