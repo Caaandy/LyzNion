@@ -22,7 +22,6 @@ public class MAIN implements ActionListener {
     private JButton bmenu;
     private JButton auswahl1;
     private JButton auswahl2;
-    private JButton auswahl3;
     private JLabel LY;
     private JLabel NI;
     private JButton b1;
@@ -91,12 +90,10 @@ public class MAIN implements ActionListener {
         fenster2.setVisible(false);
         
         //fenster 3 + 4
-        auswahl1 = new JButton("Kaffee");
+        auswahl1 = new JButton("umblättern");
         auswahl1.addActionListener(this);
-        auswahl2 = new JButton("Tee");
+        auswahl2 = new JButton(" ");
         auswahl2.addActionListener(this);
-        auswahl3 = new JButton("Pandaanhänger");
-        auswahl3.addActionListener(this);
         bmenu = new JButton("zurück zum Menu");
         bmenu.addActionListener(this);
         labelgesch = new JLabel();
@@ -112,10 +109,9 @@ public class MAIN implements ActionListener {
         fenster3.add(labelgesch);
         fenster3.setVisible(false);
 
-        panel4 = new JPanel(new GridLayout(4,1));
+        panel4 = new JPanel(new GridLayout(3,1));
         panel4.add(auswahl1);
         panel4.add(auswahl2);
-        panel4.add(auswahl3);
         panel4.add(bmenu);
 
         fenster4 = new JFrame("Fenster");
@@ -132,11 +128,26 @@ public class MAIN implements ActionListener {
             try {
                 String m = name1.getText();
                 if(bank.userSuchen(m)) {
-                    if(bank.chapterAbfrage(m) == 0) {
+                    int chapt = bank.chapterAbfrage(m);
+                    if(chapt == 0) {
                         charakterWahl();
                     }
-                    else if(bank.chapterAbfrage(m) == -2){
+                    else if(chapt == -2){
                         System.out.println("Etwas ist fehlgeschlagen! D:");
+                    }
+                    else {
+                        switch (chapt){
+                            //"Checkpoints"
+                            case 1:
+                                chapter1();
+                                break;
+                            case 3:
+                                chapter3();
+                                break;
+                            case 5:
+                                chapter5();
+                                break;
+                        }
                     }
                 }
                 else {
@@ -178,11 +189,35 @@ public class MAIN implements ActionListener {
         {
             switch (auswahl1.getText())
             {
+                case "umblättern":
+                    labelgesch.setText("<html>" + blubb.einleitung(2) + "</html>");
+                    auswahl1.setText("Kaffee");
+                    auswahl2.setText("Tee");
+                    break;
                 case "Kaffee":
                     chapter1();
                     break;
                     //Spielerei
                 case "NEU":
+                    chapter2(1);
+                    break;
+                case "BLUBB":
+                    einleitung();
+                    break;
+            } 
+        }
+        if(e.getSource() == auswahl2)
+        {
+            switch (auswahl2.getText())
+            {
+                case "Tee":
+                    chapter1();
+                    break;
+                    //Spielerei
+                case "neu":
+                    chapter2(2);
+                    break;
+                case "blubb":
                     einleitung();
                     break;
             } 
@@ -208,17 +243,65 @@ public class MAIN implements ActionListener {
         fenster2.setVisible(false);
         fenster3.setVisible(true);
         fenster4.setVisible(true);
-        labelgesch.setText("<html>" + blubb.einleitung() + ""
+        labelgesch.setText("<html>" + blubb.einleitung(1) + ""
             +"</html>");
-        auswahl1.setText("Kaffee");
+            auswahl1.setText("umblättern");
+        /*auswahl1.setText("Kaffee");
         auswahl2.setText("Tee");
-        auswahl3.setText("Pandaanhänger");
+        auswahl3.setText("Pandaanhänger");*/
     }
 
     public void chapter1() {
-        auswahl1.setText("NEU");
-        auswahl2.setText("neu");
-        auswahl3.setText("nEu");
+        auswahl1.setText("eins");
+        auswahl2.setText("EINS");
         labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
+    }
+    
+    public void chapter2(int j) {
+        auswahl1.setText("zwei");
+        auswahl2.setText("ZWEI");
+        labelgesch.setText("<html>" + blubb.chapter2(j) + "</html>");
+    }
+    
+    public void chapter3() {
+        auswahl1.setText("drei");
+        auswahl2.setText("DREI");
+        labelgesch.setText("<html>" + blubb.chapter3() + "</html>");
+    }
+    
+    public void chapter4(int j) {
+        auswahl1.setText("vier");
+        auswahl2.setText("VIER");
+        labelgesch.setText("<html>" + blubb.chapter4(j) + "</html>");
+    }
+    
+    public void chapter5() {
+        auswahl1.setText("fünf");
+        auswahl2.setText("FÜNF");
+        labelgesch.setText("<html>" + blubb.chapter5() + "</html>");
+    }
+    
+    public void chapter6(int j) {
+        auswahl1.setText("sechs");
+        auswahl2.setText("SECHS");
+        labelgesch.setText("<html>" + blubb.chapter6(j) + "</html>");
+    }
+    
+    public void chapter7(int j) {
+        auswahl1.setText("sieben");
+        auswahl2.setText("SIEBEN");
+        labelgesch.setText("<html>" + blubb.chapter7(j) + "</html>");
+    }
+    
+    public void chapter8(int j) {
+        auswahl1.setText("acht");
+        auswahl2.setText("ACHT");
+        labelgesch.setText("<html>" + blubb.chapter8(j) + "</html>");
+    }
+    
+    public void schluss() {
+        auswahl1.setText("");
+        auswahl2.setText("");
+        labelgesch.setText("<html>" + blubb.schluss() + "</html>");
     }
 }
