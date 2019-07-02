@@ -43,7 +43,7 @@ public class Nion extends STORY {
     }
     
     public String chapter3(){
-        String l = "chapter 3";
+        String l = "chapter 3 nion";
         return l;
     }
 

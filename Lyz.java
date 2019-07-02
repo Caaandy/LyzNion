@@ -43,7 +43,7 @@ public class Lyz extends STORY {
     }
 
     public String chapter3(){
-        String l = "chapter 3";
+        String l = "chapter 3 Lyz";
         return l;
     }
 
