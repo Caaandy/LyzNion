@@ -18,5 +18,5 @@ Doch die Anhänger Sunoras verlieren trotz der Niederlage und fehlender Führung
 Sie bauen im Untergrund eine Organsition auf, die, sobald der richtige Zeitpunkt kommt, den
 neuen König stürzen und die rechtmäßige Herrscherin zurückbringen wird. Die Anhänger 
 des Königs aber feiern ihren Sieg und ebenso ihren Herrscher, nicht erkennend,
-dass dies lediglich der Anfang ihres Endes ist. Denn eine Heldin wird kommen und durch ihr selbstloses Opfer die Welt
-von der Schreckensherrschaft des neuen Königs befreien.
+dass dies lediglich der Anfang ihres Untergangs ist. Denn eine Gruppe von Helden wird kommen, die Welt
+von der Schreckensherrschaft des neuen Königs zu befreien.
