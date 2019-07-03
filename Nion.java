@@ -43,33 +43,33 @@ public class Nion extends STORY {
     }
     
     public String chapter3(){
-        String l = "chapter 3 nion";
+        String l = "1. Einsatz (Informant in Gefahr)";
         return l;
     }
 
     public String chapter4(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 4.1";
+            l = "Du hast den Informanten aufgedeckt ->  wurde gefangen genommen";
         }
         if (i == 2) {
-            l= "chapter 4.2";
+            l= "Informant zu nervös -> macht Fehler -> muss gerettet werden";
         }
         return l;
     }
 
     public String chapter5(){
-        String l = "chapter 5";
+        String l = "2. Einsatz (Informant retten)";
         return l;
     }
 
     public String chapter6(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 6.1";
+            l = "Du gehst in den Raum, Wache dabei, den Informanten zu töten foltern";
         }
         if (i == 2) {
-            l= "chapter 6.2";
+            l= "Informant erzählt den Feinden die Information";
         }
         return l;
     }
@@ -77,10 +77,10 @@ public class Nion extends STORY {
     public String chapter7(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 7.1";
+            l = "Der Informant stirb";
         }
         if (i == 2) {
-            l= "chapter 7.2";
+            l= "Der Informan überlebt";
         }
         return l;
     }
