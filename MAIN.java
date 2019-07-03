@@ -343,7 +343,8 @@ public class MAIN implements ActionListener {
             }
         }
         else {
-            
+            auswahl1.setText("Mit dem Dolch auf die Wache losgehen");
+            auswahl2.setText("Nicht agressiv werden (Lyz den Wachmann übernehemen lassen)");
         }
         labelgesch.setText("<html>" + blubb.chapter6(j) + "</html>");
     }
