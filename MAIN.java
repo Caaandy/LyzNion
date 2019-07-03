@@ -203,12 +203,29 @@ public class MAIN implements ActionListener {
                 case "Kaffee":
                     chapter1();
                     break;
-                    //Spielerei
-                case "NEU":
+                case "Organisation beitreten":
                     chapter2(1);
                     break;
-                case "BLUBB":
-                    einleitung();
+                case "Kapitel 3":
+                    chapter3();
+                    break;
+                case "Informanten aufdecken":
+                    chapter4(1);
+                    break;
+                case "Kapitel 5":
+                    chapter5();
+                    break;
+                case "Raum stürmen":
+                    chapter6(1);
+                    break;
+                case "Schwert werfen":
+                    chapter7(1);
+                    break;
+                case "Schluss":
+                    schluss();
+                    break;
+                case "Weiter":
+                    chapter7(2);
                     break;
             } 
         }
@@ -220,11 +237,17 @@ public class MAIN implements ActionListener {
                     chapter1();
                     break;
                     //Spielerei
-                case "neu":
+                case "Organisation nicht beitreten":
                     chapter2(2);
                     break;
-                case "blubb":
-                    einleitung();
+                case "Informanten decken":
+                    chapter4(2);
+                    break;
+                case "Warten":
+                    chapter6(2);
+                    break;
+                case "Schwert nicht werfen":
+                    chapter7(2);
                     break;
             } 
         }
@@ -271,53 +294,53 @@ public class MAIN implements ActionListener {
 
     public void chapter1() {
         bank.chapterNeu(1, na);
-        auswahl1.setText("eins");
-        auswahl2.setText("EINS");
+        auswahl1.setText("Organisation beitreten");
+        auswahl2.setText("Organisation nicht beitreten");
         labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
     }
     
     public void chapter2(int j) {
-        auswahl1.setText("zwei");
-        auswahl2.setText("ZWEI");
+        auswahl1.setText("Kapitel 3");
+        auswahl2.setText("");
         labelgesch.setText("<html>" + blubb.chapter2(j) + "</html>");
     }
     
     public void chapter3() {
-        auswahl1.setText("drei");
-        auswahl2.setText("DREI");
+        auswahl1.setText("Informanten aufdecken");
+        auswahl2.setText("Informanten decken");
         labelgesch.setText("<html>" + blubb.chapter3() + "</html>");
         bank.chapterNeu(3, na);
     }
     
     public void chapter4(int j) {
-        auswahl1.setText("vier");
-        auswahl2.setText("VIER");
+        auswahl1.setText("Kapitel 5");
+        auswahl2.setText("");
         labelgesch.setText("<html>" + blubb.chapter4(j) + "</html>");
     }
     
     public void chapter5() {
-        auswahl1.setText("fünf");
-        auswahl2.setText("FÜNF");
+        auswahl1.setText("Raum stürmen");
+        auswahl2.setText("Warten");
         labelgesch.setText("<html>" + blubb.chapter5() + "</html>");
         bank.chapterNeu(5, na);
     }
     
     public void chapter6(int j) {
-        auswahl1.setText("sechs");
-        auswahl2.setText("SECHS");
+        if(j == 1){
+            auswahl1.setText("Schwert werfen");
+            auswahl2.setText("Schwert nicht werfen");
+        }
+        else {
+            auswahl1.setText("Weiter");
+            auswahl2.setText("");
+        }
         labelgesch.setText("<html>" + blubb.chapter6(j) + "</html>");
     }
     
     public void chapter7(int j) {
-        auswahl1.setText("sieben");
-        auswahl2.setText("SIEBEN");
+        auswahl1.setText("Schluss");
+        auswahl2.setText("");
         labelgesch.setText("<html>" + blubb.chapter7(j) + "</html>");
-    }
-    
-    public void chapter8(int j) {
-        auswahl1.setText("acht");
-        auswahl2.setText("ACHT");
-        labelgesch.setText("<html>" + blubb.chapter8(j) + "</html>");
     }
     
     public void schluss() {

@@ -75,7 +75,7 @@ public class BANK {
         try
         {
             stmt = con.createStatement();
-            stmt.executeUpdate("UPDATE `Member` SET `chapter` = "+o+" WHERE `Member`.`name`= "+na+";");
+            stmt.executeUpdate("UPDATE Member SET chapter = "+o+" WHERE Member.name= "+na);
         }
         catch (Exception e)
         {

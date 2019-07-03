@@ -7,6 +7,5 @@ abstract class STORY {
     abstract String chapter5();
     abstract String chapter6(int i);
     abstract String chapter7(int i);
-    abstract String chapter8(int i);
     abstract String schluss();
 }

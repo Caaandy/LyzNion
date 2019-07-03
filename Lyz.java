@@ -17,7 +17,7 @@ public class Lyz extends STORY {
             l = s1 + " " + s2 + " " + s3 + " " + s4 + " " + s5 + " " + s6 + " " + s7 + " " + s8;
         }
         if (i == 2) {
-            String s1 = "hiof ";
+            String s1 = "einleitung teil zwei";
             String s2 = "fis";
             String s3 = "nfs";
             String s4 = "fnjks";
@@ -34,42 +34,42 @@ public class Lyz extends STORY {
     public String chapter2(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 2.1";
+            l = "Lyz wird zur Organisation gebracht -> Nions Vater setellt Situation dat => Lyz sicheres Mitglied";
         }
         if (i == 2) {
-            l= "chapter 2.2";
+            l= "Angriff -> Lyz ohnmächtig -> wacht bei Organisation auf => Beitritt duch Überreden durch Nions Vater";
         }
         return l;
     }
 
     public String chapter3(){
-        String l = "chapter 3 Lyz";
+        String l = "1. Einsatz (Informant in Gefahr)";
         return l;
     }
 
     public String chapter4(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 4.1";
+            l = "Du hast den Informanten aufgedeckt ->  wurde gefangen genommen";
         }
         if (i == 2) {
-            l= "chapter 4.2";
+            l= "Informant zu nervös -> macht Fehler -> muss gerettet werden";
         }
         return l;
     }
 
     public String chapter5(){
-        String l = "chapter 5";
+        String l = "2. Einsatz (Informant retten)";
         return l;
     }
 
     public String chapter6(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 6.1";
+            l = "Du gehst in den Raum, Wache dabei, den Informanten zu töten foltern";
         }
         if (i == 2) {
-            l= "chapter 6.2";
+            l= "Informant erzählt den Feinden die Information";
         }
         return l;
     }
@@ -77,21 +77,10 @@ public class Lyz extends STORY {
     public String chapter7(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 7.1";
+            l = "Der Informant stirb";
         }
         if (i == 2) {
-            l= "chapter 7.2";
-        }
-        return l;
-    }
-
-    public String chapter8(int i){
-        String l = null;
-        if (i == 1) {
-            l = "chapter 8.1";
-        }
-        if (i == 2) {
-            l= "chapter 8.2";
+            l= "Der Informan überlebt";
         }
         return l;
     }

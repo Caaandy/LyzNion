@@ -85,17 +85,6 @@ public class Nion extends STORY {
         return l;
     }
 
-    public String chapter8(int i){
-        String l = null;
-        if (i == 1) {
-            l = "chapter 8.1";
-        }
-        if (i == 2) {
-            l= "chapter 8.2";
-        }
-        return l;
-    }
-
     public String schluss(){
         String l = "Fortsetzung folgt...";
         return l;
