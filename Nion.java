@@ -17,27 +17,27 @@ public class Nion extends STORY {
             l = s1 + " " + s2 + " " + s3 + " " + s4 + " " + s5 + " " + s6 + " " + s7 + " " + s8;
         }
         if (i == 2) {
-            String s1 = "hiof ";
-            String s2 = "fis";
-            String s3 = "nfs";
-            String s4 = "fnjks";
+            String s1 = "Nion Kindheit";
+            String s2 = "";
+            String s3 = "";
+            String s4 = "";
             l = "einleitung2";
         }
         return l;
     }
     
     public String chapter1(){
-        String l = "chapter 1";
+        String l = "Trifft auf Lyz in einer Seitengasse -> Sympathie";
         return l;
     }
     
     public String chapter2(int i){
         String l = null;
         if (i == 1) {
-            l = "chapter 2.1";
+            l = "Bringe Lyz zur Organisation";
         }
         if (i == 2) {
-            l= "chapter 2.2";
+            l= "'Lyz wird ohnmächtig, du schaffst sie zur Organisation";
         }
         return l;
     }

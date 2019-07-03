@@ -17,11 +17,10 @@ public class Lyz extends STORY {
             l = s1 + " " + s2 + " " + s3 + " " + s4 + " " + s5 + " " + s6 + " " + s7 + " " + s8;
         }
         if (i == 2) {
-            String s1 = "einleitung teil zwei";
-            String s2 = "fis";
-            String s3 = "nfs";
-            String s4 = "fnjks";
-            l = s1;
+            String s1 = "Lyz Kindheit";
+            String s2 = "";
+            String s3 = "";
+            String s4 = "";
         }
         return l;
     }

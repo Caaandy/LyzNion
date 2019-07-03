@@ -294,8 +294,14 @@ public class MAIN implements ActionListener {
 
     public void chapter1() {
         bank.chapterNeu(1, na);
-        auswahl1.setText("Organisation beitreten");
-        auswahl2.setText("Organisation nicht beitreten");
+        if (blubb == l) {
+            auswahl1.setText("Organisation beitreten");
+            auswahl2.setText("Organisation nicht beitreten");
+        }
+        else {
+            auswahl1.setText("Lyz zur Organisation bringen");
+            auswahl2.setText("Lyz nichts von der Organisation erzählen");
+        }
         labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
     }
     
@@ -326,13 +332,18 @@ public class MAIN implements ActionListener {
     }
     
     public void chapter6(int j) {
-        if(j == 1){
-            auswahl1.setText("Schwert werfen");
-            auswahl2.setText("Schwert nicht werfen");
+        if (blubb == l) {
+            if(j == 1){
+                auswahl1.setText("Schwert werfen");
+                auswahl2.setText("Schwert nicht werfen");
+            }
+            else {
+                auswahl1.setText("Weiter");
+                auswahl2.setText("");
+            }
         }
         else {
-            auswahl1.setText("Weiter");
-            auswahl2.setText("");
+            
         }
         labelgesch.setText("<html>" + blubb.chapter6(j) + "</html>");
     }
