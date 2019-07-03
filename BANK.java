@@ -75,7 +75,7 @@ public class BANK {
         try
         {
             stmt = con.createStatement();
-            stmt.executeUpdate("UPDATE Member SET chapter = "+o+" WHERE Member.name= "+na);
+            stmt.executeUpdate("UPDATE Member SET chapter = "+o+" WHERE Member.name= '"+na+"';");
         }
         catch (Exception e)
         {
@@ -87,7 +87,7 @@ public class BANK {
         try
         {
             stmt = con.createStatement();
-            stmt.executeUpdate("UPDATE `Member` SET `story` = " +chara+ " WHERE `Member`.`name` = "+na+";");
+            stmt.executeUpdate("UPDATE Member SET story = '"+chara+"' WHERE Member.name = '"+na+"';");
         }
         catch (Exception e)
         {
@@ -99,7 +99,7 @@ public class BANK {
         try
         {
             stmt = con.createStatement();
-            stmt.execute("INSERT INTO `Member` (`story`, `name`, `chapter`) VALUES ('Lyz', "+n+", '0');");
+            stmt.execute("INSERT INTO Member (story, name, chapter) VALUES ('Lyz', '"+n+"',0);");
         }
         catch (Exception e)
         {

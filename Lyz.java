@@ -81,6 +81,9 @@ public class Lyz extends STORY {
         if (i == 2) {
             l= "Der Informan überlebt";
         }
+        if (i == 3) {
+            l = "Der Informant lebt, aber der Feind weiß nun bescheid";
+        }
         return l;
     }
 

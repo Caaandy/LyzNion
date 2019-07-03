@@ -206,6 +206,9 @@ public class MAIN implements ActionListener {
                 case "Organisation beitreten":
                     chapter2(1);
                     break;
+                case "Lyz zur Organisation bringen":
+                    chapter2(1);
+                    break;
                 case "Kapitel 3":
                     chapter3();
                     break;
@@ -221,11 +224,14 @@ public class MAIN implements ActionListener {
                 case "Schwert werfen":
                     chapter7(1);
                     break;
+                case "Mit dem Dolch auf die Wache losgehen":
+                    chapter7(1);
+                    break;
                 case "Schluss":
                     schluss();
                     break;
                 case "Weiter":
-                    chapter7(2);
+                    chapter7(3);
                     break;
             } 
         }
@@ -240,6 +246,9 @@ public class MAIN implements ActionListener {
                 case "Organisation nicht beitreten":
                     chapter2(2);
                     break;
+                case "Lyz nichts von der Organisation erzählen":
+                    chapter2(2);
+                    break;
                 case "Informanten decken":
                     chapter4(2);
                     break;
@@ -247,6 +256,9 @@ public class MAIN implements ActionListener {
                     chapter6(2);
                     break;
                 case "Schwert nicht werfen":
+                    chapter7(2);
+                    break;
+                case "Nicht agressiv werden (Lyz den Wachmann übernehemen lassen)":
                     chapter7(2);
                     break;
             } 
@@ -343,8 +355,14 @@ public class MAIN implements ActionListener {
             }
         }
         else {
-            auswahl1.setText("Mit dem Dolch auf die Wache losgehen");
-            auswahl2.setText("Nicht agressiv werden (Lyz den Wachmann übernehemen lassen)");
+            if(j == 1){
+                auswahl1.setText("Mit dem Dolch auf die Wache losgehen");
+                auswahl2.setText("Nicht agressiv werden (Lyz den Wachmann übernehemen lassen)");
+            }
+            else {
+                auswahl1.setText("Weiter");
+                auswahl2.setText("");
+            }
         }
         labelgesch.setText("<html>" + blubb.chapter6(j) + "</html>");
     }

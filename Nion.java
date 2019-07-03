@@ -80,7 +80,10 @@ public class Nion extends STORY {
             l = "Der Informant stirb";
         }
         if (i == 2) {
-            l= "Der Informan überlebt";
+            l= "Der Informan überlebt, hat keine Informationen preisgegeben";
+        }
+        if (i == 3) {
+            l = "Der Informant lebt, aber der Feind weiß nun bescheid";
         }
         return l;
     }
