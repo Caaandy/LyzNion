@@ -52,25 +52,46 @@ public class Nion extends STORY {
     }
     
     public String chapter1(int i){
-        String l = null;
+        String s = null;
         if (i == 1) {
-            String s1 = "Er musste eingreifen. Es war nicht zwingend notwendig, dass er gegen Bob kämpfte. Er hatte andere Talente und die würde er nutzen. „Hey Bob! Ich dachte, der hohe Rat hat letztes Mal klar gemacht, dass sie keine Gewalt zwischen Kameraden dulden?“";
-            String s2 = "Bob drehte sich ruckartig in Nions Richtung, Reighar mit einer am Hand am Kragen gepackt. Dieser baumelte hilflos mit den Füßen in der Luft und versuchte, Boden zu fassen. Er schaute hoffnungsvoll auf Nion. Reighar wusste, dass dieser fast immer die richtigen Worte fand.";
-            String s3 = "Bobs Augen blitzten auf, als er ausmachte, wer ihn angesprochen hatte. „Un wat interessiert es dich, Pigmentstörung?“ „“";
-            String s4 = "";
-            String s5 = "";
-            String s6 = "";
-            String s7 = "";
-            String s8 = "";
+            String s1 = "Er musste eingreifen. Es war nicht zwingend notwendig, dass er gegen Bob kämpfte. Er hatte andere Talente und die würde er nutzen. „Hey Bob! Ich dachte, der hohe Rat hat letztes Mal klar gemacht,";
+            String s2 = "dass sie keine Gewalt zwischen Kameraden dulden?“ Bob drehte sich ruckartig in Nions Richtung, Reighar mit einer am Hand am Kragen gepackt. Dieser baumelte hilflos mit den Füßen in der Luft und versuchte,";
+            String s3 = "Boden zu fassen. Er schaute hoffnungsvoll zu Nion. Reighar wusste, dass dieser fast immer die richtigen Worte fand. Bobs Augen blitzten auf, als er versuchte auszumachen, wer ihn angesprochen hatte.";
+            String s4 = "„Und was interessiert es dich, Pigmentstörung?“ „Erstens heißt es Vitiligo, V-I-T-I-L-I-G-O. Nicht, dass du dir das mit deinem Mikrohirn merken könntest. Zweitens geht es mich etwas an,";
+            String s5 = "da mein Vater im hohen Rat sitzt, wie du sehr genau weißt. Eine kleine Randbemerkung über dein Fehlverhalten und du WARST in der Organisation.“ Bob erwiederte mit einem Grinsen, „Drohst du mir etwa?";
+            String s6 = "Mit deinem VATER? Sogar ich weiß, dass er sich einen Scheißdreck um dich kümmert. Und ich weiß nicht viel. Also versuch es nur.“, und drehte sich mit einem bösen Grinsen wieder Reighar zu. Nion wusste,";
+            String s7 = "dass Bob Recht hatte. Er hatte eine Vorführung dessen vor wenigen Minuten erst bekommen. Dennoch traf es ihn härter, als es sollte. Aber Nion ließ nicht locker. „Mag sein, dass mein Vater nichts auf mich gibt,";
+            String s8 = "aber er ist ein Ortnungshüter und hat seinen Job zu tun. Es ist egal, ob er mich bevorzugt oder vernachlässigt. Gesetz ist Gesetz. Wenn du Glück hast, werfen sie dich nur raus, vielleicht werfen sie dich auch in den Kerker.“";
+            String s9 = "Bobs Grinsen wurde zunehmend schmaler, bis er seine Lippen nachdenklich aufeinander presste. „Eine Woche, ein Monat, ein Jahr... Wer weiß, wie lang? Und nie wieder wirst du leckeren Apfelkuchen essen können.“";
+            String s10 = "Nion wusste, dass Bob eine Schwäche für Apfelkuchen hatte. „Nie mehr Apfelkuchen?“ Der Schläger sah nun ernsthaft erschüttert aus. Er war eben ein kleingeistiger Muskelprotz,";
+            String s11 = "der aber anscheinend auch einen Marshmallowkern hatte. Und diesen hatte Nion soeben getroffen. „Weißt du was, Bob? Wenn du netter zu Reighar wärst, würde er dir bestimmt Apfelkuchen machen.";
+            String s12 = "Augenscheinlich den Tränen nahe, drehte sich Bob zu Reighar, setzte ihn ab und fragte so aufrichtig es für einen beinahe heulenden Riesen ging:„Würsdest du das echt tun? So ganz wirklich?";
+            String s13 = "Ich werde nie wieder gemein zu dir sein. Ganz ehrlich versprochen“. Reighar, der etwas verwirrt von bobs plözlicher Gefühlsschwankung war, antwortete für sein eigenes Wohl:„Natürlich, ich kann eigenlich ziemlich gut backen.“";
+            String s14 = "Nion sah damit seine Aufgabe erfüllt und überließ die beiden ihrem seltsamen Gespräch. "; 
+            s = s1 + " " + s2 + " " + s3 + " " + s4 + " " + s5 + " " + s6 + " " + s7 + " " + s8 + " " + s9 + " " + s10 + " " + s11 + " " + s12 + " " + s13 + " " + s14;
         }
         if (i == 2) {
             String s1 = "Er wusste er hatte keine Chance. Diether tat ihm zwar leid, aber zwei Predigten seines Vaters an einem Tag würde er nicht aushalten. ";
             String s2 = "Außerdem würde sein Vater ihn von dem Auftrag abziehen und das wollte er nicht. Er wollte herausfinden, was an Lyz so besonders war, dass sein Vater ihn losschickte, um sie zu rekrutieren. ";
             String s3 = "Nion nahm den Becher und schaute unbeeindruckt zu, hin und wieder nahm er einen Schluck. Nach einiger Zeit konnte er nicht mehr zusehen und verlies den Raum.";
-            String s4 = "Zur Mittagszeit, war er schon in der Stadt. Als er Lyz endlich fand, musste er auf die harte Art und Weisefeststellen, dass sie auch erst handelte, bevor sie dachte. ";
-            l = s1 + " " + s2 + " " + s3 + " " + s4;
+            s = s1 + " " + s2 + " " + s3;
         }
-        return l;
+        String l1 = "Zur Mittagszeit war er schon in der Stadt. Als er Lyz endlich fand, musste er auf die harte Art und Weise feststellen, dass auch sie erst handelte, bevor sie dachte. „Noch so ein Haudrauf vom Feinsten“,";
+        String l2 = "war das einzige, das er sich dachte. In den 10 Minuten, die er sie beobachtete, startete sie zwei Streitereien, die in einer Prügelei endeten und eine, in der sie ihre zwei Schwerter dazu benutzte, einem Typen,";
+        String l3 = "den sie nicht leiden konnte, die Klamotten vom Körper zu schneiden. Eins musste Nion ihr allerdings lassen, sie wusste wie man kämpft. Sie war talentiert und mit etwas Hilfe und Anleitung könnte sie die beste Kämpferin sein,";
+        String l4 = "die der Untergrund je gesehen hatte. Aber selbst das war nicht Grund genug, sie im Untergrund aufzunehmen. Sein Vater hatte Recht. Es regnete wie aus Strömen. Er hatte Mühe, Lyz bei dem Wetter im Auge zu behalten.";
+        String l5 = "Er schaffte es, ihr zu einem Café zu folgen, das sie oft besuchte. Etwas überrascht war er, als sie jedoch zu einer alten Dame ging, die anscheinend illegal ihr Eigentum verkaufte. Er sah gespannt zu, bis er bemerkte,";
+        String l6 = "dass drei Wachen um die Ecke kamen. Sie würden beide gehängt werden, und das war nicht gut. Doch Lyz schien die Wachen zu bemerken und beredete etwas mit der alten Frau. Was würde Lyz jetzt tun?";
+        String l7 = "Er vermutete, dass sie verschwinden würde und die Frau sich selbst überlasse. Das war zumindest die logischste Entscheidung, die sie treffen konnte für sich selbst. Die Frau war so oder so verloren. Aber Lyz blieb stehen,";
+        String l8 = "kaufte ein Pandaplüsch und sah der Dame zu, wie sie um die nächste Ecke bog. Nion war neugierig geworden und beschloss nicht einzugreifen, wenn es nicht nötig wurde. Er wollte wissen was passieren würde.";
+        String l9 = "Die Wachen bogen in die Hauptstraße ein und erblickten daie rothaarige junge Frau mit einem Plüschpanda im Arm. Sie führten ein Gespräch, dass Nion nicht bis in seine Seitengasse hören konnte, aber das,";
+        String l10 = "was von den Lippen der nahesten Wache lesen konnte, war nicht gerade freundlich. Nach ungefähr zwei Minuten des Gesprächs folgten die Männer Lyz in eine von Nion gegenüberliegende Seitengasse.";
+        String l11 = "Da Nion sie nun nicht mehr sehen konnte, beschlos er, in die andere Nebenstraße zu spitzeln. Er überquerte geschickt und ungesehen die Hauptstraße und spähte in die dunkle Gasse. ";
+        String l12 = "Plötzlich erschien eine Hand wie aus dem Nichts vor ihm und packte ihn an den Haaren. Als diese ihn in die Gasse zerrte, zog er instinktiv den Dolch und holte aus. Der Griff in seinem Schopf lockerte sich und er taumelte einige Schritte zurück. ";
+        String l13 = "noch bevor er seine Balance wiederfand, spürte er einen stechenden Schmerz in seinem Gesicht. Er wurde durch einen Schlag ins Gesicht auf den Rücken geworfen und jemand setzte sich auf ihn. Über ihm saß LYz und hielt ihn am Boden.";
+        String l14 = "„Wer bist du und was willst du? du bist mir gefolgt, also weißt du was passiert, wenn du nicht redest.“";
+        String l = l1 + " " + l2 + " " + l3 + " " + l4 + " " + l5 + " " + l6 + " " + l7 + " " + l8 + " " + l9 + " " + l10 + " " + l11 + " " + l12 + " " + l13;
+        return (s + " " + l);
     }
     
     public String chapter2(int i){
