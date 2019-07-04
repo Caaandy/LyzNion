@@ -194,10 +194,19 @@ public class MAIN implements ActionListener {
             {
                 case "umblättern":
                     labelgesch.setText("<html>" + blubb.einleitung(2) + "</html>");
-                    auswahl1.setText("Dame stehen lassen und sich selbst retten");
-                    auswahl2.setText("Panda kaufen und Frau beschützen");
+                    if (blubb == l) {
+                        auswahl1.setText("Dame stehen lassen und sich selbst retten");
+                        auswahl2.setText("Panda kaufen und Frau beschützen");
+                    }
+                    else {
+                        auswahl1.setText("Einschreiten");
+                        auswahl2.setText("Den Kampf ignorieren");
+                    }
                     break;
                 case "Dame stehen lassen und sich selbst retten":
+                    chapter1(1);
+                    break;
+                case "Einschreiten":
                     chapter1(1);
                     break;
                 case "Organisation beitreten":
@@ -239,7 +248,9 @@ public class MAIN implements ActionListener {
                 case "Panda kaufen und Frau beschützen":
                     chapter1(2);
                     break;
-                    //Spielerei
+                case "Den Kampf ignorieren":
+                    chapter1(2);
+                    break;
                 case "Organisation nicht beitreten":
                     chapter2(2);
                     break;
