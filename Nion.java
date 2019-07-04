@@ -54,13 +54,21 @@ public class Nion extends STORY {
     public String chapter1(int i){
         String l = null;
         if (i == 1) {
-            l = "Er musste eingreifen. Es war nicht zwingend notwendig, dass er gegen Bob kämpfte. Er hatte andere Talente und die würde er nutzen. ";
+            String s1 = "Er musste eingreifen. Es war nicht zwingend notwendig, dass er gegen Bob kämpfte. Er hatte andere Talente und die würde er nutzen. „Hey Bob! Ich dachte, der hohe Rat hat letztes Mal klar gemacht, dass sie keine Gewalt zwischen Kameraden dulden?“";
+            String s2 = "Bob drehte sich ruckartig in Nions Richtung, Reighar mit einer am Hand am Kragen gepackt. Dieser baumelte hilflos mit den Füßen in der Luft und versuchte, Boden zu fassen. Er schaute hoffnungsvoll auf Nion. Reighar wusste, dass dieser fast immer die richtigen Worte fand.";
+            String s3 = "Bobs Augen blitzten auf, als er ausmachte, wer ihn angesprochen hatte. „Un wat interessiert es dich, Pigmentstörung?“ „“";
+            String s4 = "";
+            String s5 = "";
+            String s6 = "";
+            String s7 = "";
+            String s8 = "";
         }
         if (i == 2) {
             String s1 = "Er wusste er hatte keine Chance. Diether tat ihm zwar leid, aber zwei Predigten seines Vaters an einem Tag würde er nicht aushalten. ";
             String s2 = "Außerdem würde sein Vater ihn von dem Auftrag abziehen und das wollte er nicht. Er wollte herausfinden, was an Lyz so besonders war, dass sein Vater ihn losschickte, um sie zu rekrutieren. ";
             String s3 = "Nion nahm den Becher und schaute unbeeindruckt zu, hin und wieder nahm er einen Schluck. Nach einiger Zeit konnte er nicht mehr zusehen und verlies den Raum.";
             String s4 = "Zur Mittagszeit, war er schon in der Stadt. Als er Lyz endlich fand, musste er auf die harte Art und Weisefeststellen, dass sie auch erst handelte, bevor sie dachte. ";
+            l = s1 + " " + s2 + " " + s3 + " " + s4;
         }
         return l;
     }
