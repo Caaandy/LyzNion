@@ -197,10 +197,10 @@ public class MAIN implements ActionListener {
             {
                 case "umblättern":
                     labelgesch.setText("<html>" + blubb.einleitung(2) + "</html>");
-                    auswahl1.setText("Kaffee");
-                    auswahl2.setText("Tee");
+                    auswahl1.setText("Dame stehen lassen und sich selbst retten");
+                    auswahl2.setText("Panda kaufen und Frau beschützen");
                     break;
-                case "Kaffee":
+                case "Dame stehen lassen und sich selbst retten":
                     chapter1();
                     break;
                 case "Organisation beitreten":
@@ -239,7 +239,7 @@ public class MAIN implements ActionListener {
         {
             switch (auswahl2.getText())
             {
-                case "Tee":
+                case "Panda kaufen und Frau beschützen":
                     chapter1();
                     break;
                     //Spielerei
