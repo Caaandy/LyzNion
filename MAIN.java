@@ -103,7 +103,7 @@ public class MAIN implements ActionListener {
             +"</html>");
 
         fenster3 = new JFrame("Fenster");
-        fenster3.setSize(800,600);
+        fenster3.setSize(800,800);
         fenster3.setLocation(100,200);
         fenster3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fenster3.add(labelgesch);
