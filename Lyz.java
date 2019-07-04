@@ -44,10 +44,19 @@ public class Lyz extends STORY {
         return l;
     }
 
-    public String chapter1(){
-        String l = "";
+    public String chapter1(int i){
         String s1 = "";
-        return l;
+        String s2 = "";
+        String s3 = "";
+        String s4 = "";
+        if (i == 0)
+        {
+            s1 = "Lyz, die wusste, dass ihre Fähigkeiten nicht ausreichen, um drei Wachen auf einmal zu besiegen, entschied sich für Variante eins.";
+            s2 = "„Hören Sie mir zu. Da hinten kommen drei Wachen. Sie sollten möglichst schnell aufhören, schlecht über den König zu reden und dann schleunigst verschwinden.";
+            s3 = "So wie ich es jetzt tun werde.“, damit verabschiedete sich Lyz drehte sich um 180 Grad und lief in die nächste Seitengasse. Sie überließ die Frau ihrem Schicksal.";
+        }
+        String l = "trifft auf Nion";
+        return (s1 + " " + s2 +" "+ s3  + " " + s4 + " " + l);
     }
 
     public String chapter2(int i){

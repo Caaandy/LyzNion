@@ -140,9 +140,6 @@ public class MAIN implements ActionListener {
                         charakter(na);
                         switch (chapt){
                             //"Checkpoints"
-                            case 1:
-                                chapter1();
-                                break;
                             case 3:
                                 chapter3();
                                 break;
@@ -201,7 +198,7 @@ public class MAIN implements ActionListener {
                     auswahl2.setText("Panda kaufen und Frau beschützen");
                     break;
                 case "Dame stehen lassen und sich selbst retten":
-                    chapter1();
+                    chapter1(1);
                     break;
                 case "Organisation beitreten":
                     chapter2(1);
@@ -240,7 +237,7 @@ public class MAIN implements ActionListener {
             switch (auswahl2.getText())
             {
                 case "Panda kaufen und Frau beschützen":
-                    chapter1();
+                    chapter1(2);
                     break;
                     //Spielerei
                 case "Organisation nicht beitreten":
@@ -304,7 +301,7 @@ public class MAIN implements ActionListener {
         auswahl2.setText("");
     }
 
-    public void chapter1() {
+    public void chapter1(int i) {
         bank.chapterNeu(1, na);
         if (blubb == l) {
             auswahl1.setText("Organisation beitreten");
@@ -314,7 +311,7 @@ public class MAIN implements ActionListener {
             auswahl1.setText("Lyz zur Organisation bringen");
             auswahl2.setText("Lyz nichts von der Organisation erzählen");
         }
-        labelgesch.setText("<html>" + blubb.chapter1() + "</html>");
+        labelgesch.setText("<html>" + blubb.chapter1(i) + "</html>");
     }
     
     public void chapter2(int j) {
