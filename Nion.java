@@ -101,7 +101,7 @@ public class Nion extends STORY {
         }
         if (i == 2) {
             String s1 = "„Eh, nur ein besorgter Mitbürger“ Nion war sich sicher, dass Lyz ihm nicht glauben würde, egal was er sagte. Aber gleich die Organisation zu nennen neben Wachen, die vieleicht noch halb bei Bewusstsein waren, war ";
-            String s2 = "sicherlich keine gute Idee";
+            String s2 = "sicherlich keine gute Idee. ";
             String s3 = "";
             String s4 = "";
             String s5 = "";
