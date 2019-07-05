@@ -86,10 +86,10 @@ public class Nion extends STORY {
         String l8 = "kaufte ein Pandaplüsch und sah der Dame zu, wie sie um die nächste Ecke bog. Nion war neugierig geworden und beschloss nicht einzugreifen, wenn es nicht nötig wurde. Er wollte wissen was passieren würde.";
         String l9 = "Die Wachen bogen in die Hauptstraße ein und erblickten daie rothaarige junge Frau mit einem Plüschpanda im Arm. Sie führten ein Gespräch, dass Nion nicht bis in seine Seitengasse hören konnte, aber das,";
         String l10 = "was von den Lippen der nahesten Wache lesen konnte, war nicht gerade freundlich. Nach ungefähr zwei Minuten des Gesprächs folgten die Männer Lyz in eine von Nion gegenüberliegende Seitengasse.";
-        String l11 = "Da Nion sie nun nicht mehr sehen konnte, beschlos er, in die andere Nebenstraße zu spitzeln. Er überquerte geschickt und ungesehen die Hauptstraße und spähte in die dunkle Gasse. ";
-        String l12 = "Plötzlich erschien eine Hand wie aus dem Nichts vor ihm und packte ihn an den Haaren. Als diese ihn in die Gasse zerrte, zog er instinktiv den Dolch und holte aus. Der Griff in seinem Schopf lockerte sich und er taumelte einige Schritte zurück. ";
-        String l13 = "noch bevor er seine Balance wiederfand, spürte er einen stechenden Schmerz in seinem Gesicht. Er wurde durch einen Schlag ins Gesicht auf den Rücken geworfen und jemand setzte sich auf ihn. Über ihm saß LYz und hielt ihn am Boden.";
-        String l14 = "„Wer bist du und was willst du? du bist mir gefolgt, also weißt du was passiert, wenn du nicht redest.“";
+        String l11 = "Da Nion sie nun nicht mehr sehen konnte, beschloss er, in die andere Nebenstraße zu spitzeln. Er überquerte geschickt und ungesehen die Hauptstraße und spähte in die dunkle Gasse.";
+        String l12 = "Plötzlich erschien eine Hand wie aus dem Nichts vor ihm und packte ihn an den Haaren. Als diese ihn in die Gasse zerrte, zog er instinktiv den Dolch und holte aus. Er fand den Gegner nicht, aber der Griff in seinem Schopf lockerte sich";
+        String l13 = "und Nion taumelte einige Schritte zurück. Noch bevor er seine Balance wiederfand, spürte er einen stechenden Schmerz in seinem Gesicht. Er wurde durch einen Schlag ins Gesicht auf den Rücken geworfen und jemand setzte sich auf ihn.";
+        String l14 = "Über ihm saß LYz und hielt ihn am Boden. „Wer bist du und was willst du? Du bist mir gefolgt, also weißt du was passiert, wenn du nicht redest.“";
         String l = l1 + " " + l2 + " " + l3 + " " + l4 + " " + l5 + " " + l6 + " " + l7 + " " + l8 + " " + l9 + " " + l10 + " " + l11 + " " + l12 + " " + l13;
         return (s + " " + l);
     }
@@ -100,7 +100,7 @@ public class Nion extends STORY {
             l = "Bringe Lyz zur Organisation";
         }
         if (i == 2) {
-            l= "Lyz wird ohnmächtig, du schaffst sie zur Organisation";
+            l= "„Eh, nur ein besorgter Mitbürger“";
         }
         return l;
     }
