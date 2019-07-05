@@ -100,7 +100,7 @@ public class Nion extends STORY {
             l = "Bringe Lyz zur Organisation";
         }
         if (i == 2) {
-            l= "Lyz wird ohnmächtig, du schaffst sie zur Organisation";
+            l= "„Eh, nur ein besorgter Mitbürger“";
         }
         return l;
     }
